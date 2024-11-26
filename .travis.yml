@@ -1,3 +1,29 @@
+language: python
+python:
+  - "3.8"  # Replace with your desired Python version
+  - "3.9"
+  - "3.10"
+
+# Install dependencies
+install:
+  - pip install -r requirements.txt  # Ensure you have a requirements.txt file
+  - pip install pytest  # Install pytest for running tests (optional, replace with your test framework)
+
+# Run tests
+script:
+  - pytest  # Replace with your test command
+
+# Cache pip to speed up builds
+cache: pip
+
+# Notify via email if build fails or passes
+notifications:
+  email:
+    recipients:
+      anguri2264@gmail.com  # Replace with your email
+    on_success: always  # Options: [always|never|change]
+    on_failure: always
+
 
 
 
